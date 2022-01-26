@@ -15,7 +15,7 @@ VBoxClient --clipboard &
 VBoxClient --draganddrop &
 VBoxClient --seamless &
 VBoxClient --checkhostversion &
-VBoxClient --vmsvga
+VBoxClient --vmsvga &
 
 # Exit script and show the guest additions were installed.
 echo "\n\nVirtual box guest additions installed!\nPlease reboot your system."
