@@ -18,5 +18,5 @@ VBoxClient --checkhostversion &
 VBoxClient --vmsvga &
 
 # Exit script and show the guest additions were installed.
-echo "\n\nVirtual box guest additions installed!\nPlease reboot your system."
+echo "\n\nVirtual box guest additions installed!\nPlease reboot your system." &
 exit 1
