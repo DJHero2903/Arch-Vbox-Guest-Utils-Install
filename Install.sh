@@ -1,5 +1,5 @@
-# Check is the script is being run as root, if so exit.
-if [[ $(id -u) == 0 ]] ; then echo "Don't run this script as root.\nExiting." ; exit 1 ; fi
+# Check is the script is being run as root, if not exit.
+if [[ $(id -u) -ne 0 ]] ; then echo "Run this script as root!" ; exit 1 ; fi
 
 # Update mirrors and install the virtualbox-guest-utils package.
 sudo pacman -Sy --noconfirm virtualbox-guest-utils  &
@@ -9,6 +9,9 @@ sudo systemctl enable --now vboxservice.service &
 
 # Add the virtualbox modules to the Linux Kernel.
 sudo modprobe -a vboxguest vboxsf vboxvideo &
+
+# Invalidate the cached sudo credentials.
+sudo -k
 
 # Enable Virtualbox client features.
 VBoxClient --clipboard &
