@@ -22,6 +22,6 @@ VBoxClient --vmsvga
 
 # Exit script and show the guest additions were installed.
 echo ""
-echo "\n\nVirtual box guest additions installed!\nPlease reboot your system."
+echo "Virtual box guest additions installed! Please reboot your system."
 
 exit 1
