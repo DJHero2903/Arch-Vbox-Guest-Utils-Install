@@ -13,9 +13,9 @@ echo "Virtualbox service enabled."
 sudo modprobe -a vboxguest vboxsf vboxvideo
 echo "Virtualbox kernal modules installed."
 
-# Add $USER to the vboxsf group.
-usermod -aG vboxsf $USER
-echo "$USER has been added to the vboxsf group."
+# Add the currently logged-in user to the vboxsf group.
+sudo usermod -aG vboxsf $LOGNAME
+echo "$LOGNAME has been added to the vboxsf group."
 
 # Enable Virtualbox client features.
 VBoxClient --clipboard
