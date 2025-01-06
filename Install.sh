@@ -14,7 +14,7 @@ sudo usermod -aG vboxsf $LOGNAME
 echo -e "\033[1;36m$LOGNAME \033[1;35mhas been added to the vboxsf group.\033[0m"
 
 # Enable Virtualbox client features.
-VBoxClient-all
+sudo VBoxClient-all
 
 echo -e "\033[1;35mRunning /usr/bin/VBoxClient-all script to enable Virtualbox client features\033[0m"
 
